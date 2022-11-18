@@ -1,15 +1,13 @@
 package main
 
-import (
-	"asignment/controllers"
-	"asignment/models"
-
-	"github.com/gin-gonic/gin"
-)
+import "asignment/controllers"
 
 func main() {
-	models.ConnectDataBase()
-	router := gin.Default()
-	router.POST("/createUser", controllers.AddUsers)
-	router.Run(":8080")
+	controllers.CallApi()
+	// models.ConnectDataBase()
+	// router := gin.Default()
+	// router.POST("/createUser", controllers.AddUsers)
+	// router.POST("/checkStatus", controllers.CallApi)
+	// router.Run(":8080")
+
 }
